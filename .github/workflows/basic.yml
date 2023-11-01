@@ -7,4 +7,7 @@ jobs:
     name: Selenium Test Job
     steps:
     - run: echo "this is running inside a ${{ runner.os }} server in github"
-      
+    - name: Check Out source code
+      uses: actions/checkout@v4.1.1
+    - run: echo "this is repo is ${{ github.repository }} .."
+    
